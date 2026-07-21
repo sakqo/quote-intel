@@ -1,0 +1,696 @@
+{
+  "quotes": [
+    {
+      "quote_number": "MIS-22-0103",
+      "quote_date": "2022-03-02",
+      "customer": "Thornton Mills",
+      "layout": "table",
+      "files": [
+        "MIS-22-0103.docx",
+        "MIS-22-0103.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "CPL-4415",
+          "product_name": "Jaw Coupling 28mm Complete",
+          "description": "Three-piece jaw coupling with two sintered iron hubs and NBR spider insert. Accommodates 28 mm bores with standard keyway. Torque rating 190 Nm with vibration-damping elastomer element.",
+          "unit_price": 68.23,
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "quote_number": "QT220110",
+      "quote_date": "2022-03-05",
+      "customer": "Harbor Marine Services",
+      "layout": "paragraph",
+      "files": [
+        "QT220110.docx",
+        "QT220110.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "VLV-1120",
+          "product_name": "3/4\" Bronze Gate Valve",
+          "description": "Class 125 bronze gate valve with threaded NPT ends and a non-rising stem. Solid wedge disc for positive shutoff in water and low-pressure steam lines. Meets MSS SP-80 specifications.",
+          "unit_price": 42.76,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "quote_number": "Q-2022-0114",
+      "quote_date": "2022-03-12",
+      "customer": "Harbor Marine Services",
+      "layout": "letter",
+      "files": [
+        "Q-2022-0114.docx",
+        "Q-2022-0114.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "BRG-7742",
+          "product_name": "Spherical Roller Bearing 65mm",
+          "description": null,
+          "unit_price": 317.53,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "quote_number": "Q-2022-0125",
+      "quote_date": "2022-03-16",
+      "customer": "Apex Fabrication LLC",
+      "layout": "table",
+      "files": [
+        "Q-2022-0125.docx",
+        "Q-2022-0125.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "MTR-559",
+          "product_name": "5HP TEFC Motor 1800RPM",
+          "description": "Totally enclosed fan-cooled induction motor, 5 HP at 1800 RPM. NEMA 184T frame with cast iron housing and Class F insulation. Rated for 230/460V three-phase operation with a 1.15 service factor.",
+          "unit_price": 880.25,
+          "quantity": 2
+        },
+        {
+          "part_number": "BRG-7742",
+          "product_name": "Spherical Roller Bearing 65mm",
+          "description": "Double-row spherical roller bearing with a 65 mm bore and brass cage. Self-aligning design tolerates up to 2 degrees of shaft misalignment. C3 internal clearance for high-temperature operation.",
+          "unit_price": 318.17,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "quote_number": "QT220129",
+      "quote_date": "2022-07-07",
+      "customer": "Harbor Marine Services",
+      "layout": "paragraph",
+      "files": [
+        "QT220129.docx",
+        "QT220129.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "BRG-7742",
+          "product_name": "Spherical Roller Bearing 65mm",
+          "description": "Double-row spherical roller bearing with a 65 mm bore and brass cage. Self-aligning design tolerates up to 2 degrees of shaft misalignment. C3 internal clearance for high-temperature operation.",
+          "unit_price": 324.31,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "quote_number": "QT220137",
+      "quote_date": "2022-07-20",
+      "customer": "Great Lakes Processing Inc.",
+      "layout": "letter",
+      "files": [
+        "QT220137.docx",
+        "QT220137.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "PMP-118",
+          "product_name": "Centrifugal Transfer Pump 1.5HP",
+          "description": "End-suction centrifugal pump with cast iron volute and bronze impeller. Delivers up to 85 GPM at 60 feet of head on a 1.5 HP TEFC motor. Mechanical seal is carbon-ceramic rated for continuous duty. Suitable for clear water transfer and light industrial coolant loops.",
+          "unit_price": 1246.51,
+          "quantity": 25
+        },
+        {
+          "part_number": "CPL-4415",
+          "product_name": "Jaw Coupling 28mm Complete",
+          "description": "Three-piece jaw coupling with two sintered iron hubs and NBR spider insert. Accommodates 28 mm bores with standard keyway. Torque rating 190 Nm with vibration-damping elastomer element.",
+          "unit_price": 69.88,
+          "quantity": 1
+        },
+        {
+          "part_number": "SEN-9902",
+          "product_name": "Pressure Transmitter 0-300PSI",
+          "description": "Industrial pressure transmitter with 0-300 PSI gauge range and 4-20 mA output. 316L stainless wetted parts with 1/4\" NPT process connection. Accuracy of 0.25% full scale, CE and UL rated. Operating temperature -40 to 105 C.",
+          "unit_price": 242.92,
+          "quantity": 3
+        },
+        {
+          "part_number": "FLT-8801",
+          "product_name": "Hydraulic Return Filter Assembly",
+          "description": "Tank-mounted return line filter with 10 micron cellulose element. Flow capacity of 40 GPM with integral bypass valve set at 25 PSI. Visual clogging indicator standard on the die-cast aluminum head.",
+          "unit_price": 159.95,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "quote_number": "Q-2022-0144",
+      "quote_date": "2022-08-07",
+      "customer": "Ironwood Mining Corp.",
+      "layout": "table",
+      "files": [
+        "Q-2022-0144.docx",
+        "Q-2022-0144.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "VLV-2043",
+          "product_name": "2\" Stainless Ball Valve",
+          "description": "Full-port two-piece ball valve in 316 stainless steel with PTFE seats. Rated to 1000 PSI WOG and suitable for steam service up to 150 PSI. Locking lever handle included as standard.",
+          "unit_price": 191.87,
+          "quantity": 25
+        },
+        {
+          "part_number": "REG-5518",
+          "product_name": "Air Pressure Regulator 1/2\" NPT",
+          "description": "Relieving-type air pressure regulator with 1/2 inch NPT ports. Adjustable 5-125 PSI outlet range with 220 SCFM flow capacity. Polycarbonate bowl guard and panel-mount nut included.",
+          "unit_price": 55.73,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "quote_number": "QT220150",
+      "quote_date": "2022-08-26",
+      "customer": "Delta Packaging Systems",
+      "layout": "paragraph",
+      "files": [
+        "QT220150.docx",
+        "QT220150.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "BRG-7742",
+          "product_name": "Spherical Roller Bearing 65mm",
+          "description": "Double-row spherical roller bearing with a 65 mm bore and brass cage. Self-aligning design tolerates up to 2 degrees of shaft misalignment. C3 internal clearance for high-temperature operation.",
+          "unit_price": 330.41,
+          "quantity": 2
+        },
+        {
+          "part_number": "HSE-4432",
+          "product_name": "Hydraulic Hose Assembly 1/2\" x 36\"",
+          "description": null,
+          "unit_price": 39.58,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "quote_number": "MIS-22-0158",
+      "quote_date": "2022-10-22",
+      "customer": "Blue Ridge Paper Co.",
+      "layout": "letter",
+      "files": [
+        "MIS-22-0158.docx",
+        "MIS-22-0158.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "SEN-9902",
+          "product_name": "Pressure Transmitter 0-300PSI",
+          "description": "Industrial pressure transmitter with 0-300 PSI gauge range and 4-20 mA output. 316L stainless wetted parts with 1/4\" NPT process connection. Accuracy of 0.25% full scale, CE and UL rated. Operating temperature -40 to 105 C.",
+          "unit_price": 247.78,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "quote_number": "MIS-23-0166",
+      "quote_date": "2023-04-02",
+      "customer": "Great Lakes Processing Inc.",
+      "layout": "table",
+      "files": [
+        "MIS-23-0166.docx",
+        "MIS-23-0166.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "PMP-3305",
+          "product_name": "Diaphragm Metering Pump",
+          "description": "Solenoid-driven diaphragm metering pump for chemical dosing applications. Adjustable output from 0.5 to 12 GPH with PVDF liquid end for aggressive media. Includes foot valve, injection fitting, and 6 feet of suction tubing.",
+          "unit_price": 717.37,
+          "quantity": 5
+        },
+        {
+          "part_number": "BRG-7742",
+          "product_name": "Spherical Roller Bearing 65mm",
+          "description": "Double-row spherical roller bearing with a 65 mm bore and brass cage. Self-aligning design tolerates up to 2 degrees of shaft misalignment. C3 internal clearance for high-temperature operation.",
+          "unit_price": 340.95,
+          "quantity": 2
+        },
+        {
+          "part_number": "PMP-118",
+          "product_name": "Centrifugal Transfer Pump 1.5HP",
+          "description": "End-suction centrifugal pump with cast iron volute and bronze impeller. Delivers up to 85 GPM at 60 feet of head on a 1.5 HP TEFC motor. Mechanical seal is carbon-ceramic rated for continuous duty. Suitable for clear water transfer and light industrial coolant loops.",
+          "unit_price": 1316.52,
+          "quantity": 12
+        },
+        {
+          "part_number": "VLV-2043",
+          "product_name": "2\" Stainless Ball Valve",
+          "description": null,
+          "unit_price": 199.64,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "quote_number": "MIS-23-0171",
+      "quote_date": "2023-04-12",
+      "customer": "Cascade Water Authority",
+      "layout": "paragraph",
+      "files": [
+        "MIS-23-0171.docx",
+        "MIS-23-0171.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "ACT-7350",
+          "product_name": "Pneumatic Rotary Actuator",
+          "description": "Rack-and-pinion pneumatic actuator, double-acting, 90 degree rotation. Output torque 350 in-lb at 80 PSI supply with NAMUR accessory mounting. Anodized aluminum body with stainless fasteners.",
+          "unit_price": 210.46,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "quote_number": "QT230177",
+      "quote_date": "2023-05-01",
+      "customer": "Apex Fabrication LLC",
+      "layout": "letter",
+      "files": [
+        "QT230177.docx",
+        "QT230177.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "VLV-2043",
+          "product_name": "2\" Stainless Ball Valve",
+          "description": "Full-port two-piece ball valve in 316 stainless steel with PTFE seats. Rated to 1000 PSI WOG and suitable for steam service up to 150 PSI. Locking lever handle included as standard.",
+          "unit_price": 199.27,
+          "quantity": 12
+        },
+        {
+          "part_number": "REG-5518",
+          "product_name": "Air Pressure Regulator 1/2\" NPT",
+          "description": "Relieving-type air pressure regulator with 1/2 inch NPT ports. Adjustable 5-125 PSI outlet range with 220 SCFM flow capacity. Polycarbonate bowl guard and panel-mount nut included.",
+          "unit_price": 57.07,
+          "quantity": 2
+        },
+        {
+          "part_number": "PMP-3305",
+          "product_name": "Diaphragm Metering Pump",
+          "description": "Solenoid-driven diaphragm metering pump for chemical dosing applications. Adjustable output from 0.5 to 12 GPH with PVDF liquid end for aggressive media. Includes foot valve, injection fitting, and 6 feet of suction tubing.",
+          "unit_price": 728.69,
+          "quantity": 6
+        },
+        {
+          "part_number": "SEN-9902",
+          "product_name": "Pressure Transmitter 0-300PSI",
+          "description": "Industrial pressure transmitter with 0-300 PSI gauge range and 4-20 mA output. 316L stainless wetted parts with 1/4\" NPT process connection. Accuracy of 0.25% full scale, CE and UL rated. Operating temperature -40 to 105 C.",
+          "unit_price": 252.81,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "quote_number": "QT230184",
+      "quote_date": "2023-05-26",
+      "customer": "Cascade Water Authority",
+      "layout": "table",
+      "files": [
+        "QT230184.docx",
+        "QT230184.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "REG-5518",
+          "product_name": "Air Pressure Regulator 1/2\" NPT",
+          "description": "Relieving-type air pressure regulator with 1/2 inch NPT ports. Adjustable 5-125 PSI outlet range with 220 SCFM flow capacity. Polycarbonate bowl guard and panel-mount nut included.",
+          "unit_price": 57.04,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "quote_number": "MIS-23-0194",
+      "quote_date": "2023-07-27",
+      "customer": "Apex Fabrication LLC",
+      "layout": "paragraph",
+      "files": [
+        "MIS-23-0194.docx",
+        "MIS-23-0194.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "SEN-9902",
+          "product_name": "Pressure Transmitter 0-300PSI",
+          "description": "Industrial pressure transmitter with 0-300 PSI gauge range and 4-20 mA output. 316L stainless wetted parts with 1/4\" NPT process connection. Accuracy of 0.25% full scale, CE and UL rated. Operating temperature -40 to 105 C.",
+          "unit_price": 258.16,
+          "quantity": 3
+        },
+        {
+          "part_number": "VLV-2043",
+          "product_name": "2\" Stainless Ball Valve",
+          "description": "Full-port two-piece ball valve in 316 stainless steel with PTFE seats. Rated to 1000 PSI WOG and suitable for steam service up to 150 PSI. Locking lever handle included as standard.",
+          "unit_price": 200.93,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "quote_number": "Q-2024-0202",
+      "quote_date": "2024-05-23",
+      "customer": "Great Lakes Processing Inc.",
+      "layout": "letter",
+      "files": [
+        "Q-2024-0202.docx",
+        "Q-2024-0202.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "VLV-1120",
+          "product_name": "3/4\" Bronze Gate Valve",
+          "description": "Class 125 bronze gate valve with threaded NPT ends and a non-rising stem. Solid wedge disc for positive shutoff in water and low-pressure steam lines. Meets MSS SP-80 specifications.",
+          "unit_price": 48.04,
+          "quantity": null
+        },
+        {
+          "part_number": "PMP-118",
+          "product_name": "Centrifugal Transfer Pump 1.5HP",
+          "description": "End-suction centrifugal pump with cast iron volute and bronze impeller. Delivers up to 85 GPM at 60 feet of head on a 1.5 HP TEFC motor. Mechanical seal is carbon-ceramic rated for continuous duty. Suitable for clear water transfer and light industrial coolant loops.",
+          "unit_price": 1412.22,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "quote_number": "QT240206",
+      "quote_date": "2024-11-09",
+      "customer": "Pinnacle Foods Plant 7",
+      "layout": "table",
+      "files": [
+        "QT240206.docx",
+        "QT240206.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "VLV-2043",
+          "product_name": "2\" Stainless Ball Valve",
+          "description": "Full-port two-piece ball valve in 316 stainless steel with PTFE seats. Rated to 1000 PSI WOG and suitable for steam service up to 150 PSI. Locking lever handle included as standard.",
+          "unit_price": 218.85,
+          "quantity": 2
+        },
+        {
+          "part_number": "CMP-1187",
+          "product_name": "Rotary Screw Air Compressor 10HP",
+          "description": null,
+          "unit_price": 7880.61,
+          "quantity": 12
+        },
+        {
+          "part_number": "BRG-7742",
+          "product_name": "Spherical Roller Bearing 65mm",
+          "description": "Double-row spherical roller bearing with a 65 mm bore and brass cage. Self-aligning design tolerates up to 2 degrees of shaft misalignment. C3 internal clearance for high-temperature operation.",
+          "unit_price": 385.64,
+          "quantity": 2
+        },
+        {
+          "part_number": "PMP-118",
+          "product_name": "Centrifugal Transfer Pump 1.5HP",
+          "description": "End-suction centrifugal pump with cast iron volute and bronze impeller. Delivers up to 85 GPM at 60 feet of head on a 1.5 HP TEFC motor. Mechanical seal is carbon-ceramic rated for continuous duty. Suitable for clear water transfer and light industrial coolant loops.",
+          "unit_price": 1468.27,
+          "quantity": null
+        }
+      ]
+    },
+    {
+      "quote_number": "QT250216",
+      "quote_date": "2025-01-30",
+      "customer": "Cascade Water Authority",
+      "layout": "paragraph",
+      "files": [
+        "QT250216.docx",
+        "QT250216.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "PMP-118",
+          "product_name": "Centrifugal Transfer Pump 1.5HP",
+          "description": "End-suction centrifugal pump with cast iron volute and bronze impeller. Delivers up to 85 GPM at 60 feet of head on a 1.5 HP TEFC motor. Mechanical seal is carbon-ceramic rated for continuous duty. Suitable for clear water transfer and light industrial coolant loops.",
+          "unit_price": 1495.42,
+          "quantity": 10
+        },
+        {
+          "part_number": "BRG-7742",
+          "product_name": "Spherical Roller Bearing 65mm",
+          "description": "Double-row spherical roller bearing with a 65 mm bore and brass cage. Self-aligning design tolerates up to 2 degrees of shaft misalignment. C3 internal clearance for high-temperature operation.",
+          "unit_price": 397.41,
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "quote_number": "MIS-25-0223",
+      "quote_date": "2025-03-04",
+      "customer": "Apex Fabrication LLC",
+      "layout": "letter",
+      "files": [
+        "MIS-25-0223.docx",
+        "MIS-25-0223.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "ACT-7350",
+          "product_name": "Pneumatic Rotary Actuator",
+          "description": "Rack-and-pinion pneumatic actuator, double-acting, 90 degree rotation. Output torque 350 in-lb at 80 PSI supply with NAMUR accessory mounting. Anodized aluminum body with stainless fasteners.",
+          "unit_price": 226.43,
+          "quantity": 12
+        },
+        {
+          "part_number": "SEN-9902",
+          "product_name": "Pressure Transmitter 0-300PSI",
+          "description": "Industrial pressure transmitter with 0-300 PSI gauge range and 4-20 mA output. 316L stainless wetted parts with 1/4\" NPT process connection. Accuracy of 0.25% full scale, CE and UL rated. Operating temperature -40 to 105 C.",
+          "unit_price": 277.86,
+          "quantity": 1
+        },
+        {
+          "part_number": "BRG-7742",
+          "product_name": "Spherical Roller Bearing 65mm",
+          "description": "Double-row spherical roller bearing with a 65 mm bore and brass cage. Self-aligning design tolerates up to 2 degrees of shaft misalignment. C3 internal clearance for high-temperature operation.",
+          "unit_price": 397.53,
+          "quantity": 10
+        },
+        {
+          "part_number": "FLT-8801",
+          "product_name": "Hydraulic Return Filter Assembly",
+          "description": null,
+          "unit_price": 171.25,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "quote_number": "MIS-25-0228",
+      "quote_date": "2025-05-03",
+      "customer": "Harbor Marine Services",
+      "layout": "table",
+      "files": [
+        "MIS-25-0228.docx",
+        "MIS-25-0228.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "PMP-118",
+          "product_name": "Centrifugal Transfer Pump 1.5HP",
+          "description": null,
+          "unit_price": 1511.79,
+          "quantity": 25
+        }
+      ]
+    },
+    {
+      "quote_number": "MIS-25-0233",
+      "quote_date": "2025-05-26",
+      "customer": "Cascade Water Authority",
+      "layout": "paragraph",
+      "files": [
+        "MIS-25-0233.docx",
+        "MIS-25-0233.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "VLV-2043",
+          "product_name": "2\" Stainless Ball Valve",
+          "description": "Full-port two-piece ball valve in 316 stainless steel with PTFE seats. Rated to 1000 PSI WOG and suitable for steam service up to 150 PSI. Locking lever handle included as standard.",
+          "unit_price": 224.58,
+          "quantity": 25
+        },
+        {
+          "part_number": "ACT-7350",
+          "product_name": "Pneumatic Rotary Actuator",
+          "description": "Rack-and-pinion pneumatic actuator, double-acting, 90 degree rotation. Output torque 350 in-lb at 80 PSI supply with NAMUR accessory mounting. Anodized aluminum body with stainless fasteners.",
+          "unit_price": 228.08,
+          "quantity": 2
+        },
+        {
+          "part_number": "CMP-1187",
+          "product_name": "Rotary Screw Air Compressor 10HP",
+          "description": "Belt-driven rotary screw compressor delivering 38 CFM at 125 PSI. 10 HP TEFC motor with wye-delta starter mounted on an 80 gallon receiver. Integrated refrigerated dryer and digital sequencing controller.",
+          "unit_price": 8164.38,
+          "quantity": 4
+        },
+        {
+          "part_number": "MTR-559",
+          "product_name": "5HP TEFC Motor 1800RPM",
+          "description": "Totally enclosed fan-cooled induction motor, 5 HP at 1800 RPM. NEMA 184T frame with cast iron housing and Class F insulation. Rated for 230/460V three-phase operation with a 1.15 service factor.",
+          "unit_price": 1070.35,
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "quote_number": "QT250241",
+      "quote_date": "2025-08-11",
+      "customer": "Cascade Water Authority",
+      "layout": "letter",
+      "files": [
+        "QT250241.docx",
+        "QT250241.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "HYD-6621",
+          "product_name": "Hydraulic Cylinder 3\" Bore x 12\" Stroke",
+          "description": "Welded cross-tube hydraulic cylinder with 3 inch bore and 12 inch stroke. 3000 PSI working pressure with chrome-plated induction-hardened rod. SAE ports and greaseable pivot pins on both ends.",
+          "unit_price": 548.5,
+          "quantity": 2
+        },
+        {
+          "part_number": "SEN-9902",
+          "product_name": "Pressure Transmitter 0-300PSI",
+          "description": "Industrial pressure transmitter with 0-300 PSI gauge range and 4-20 mA output. 316L stainless wetted parts with 1/4\" NPT process connection. Accuracy of 0.25% full scale, CE and UL rated. Operating temperature -40 to 105 C.",
+          "unit_price": 285.44,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "quote_number": "QT250247",
+      "quote_date": "2025-10-26",
+      "customer": "Great Lakes Processing Inc.",
+      "layout": "table",
+      "files": [
+        "QT250247.docx",
+        "QT250247.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "VLV-2043",
+          "product_name": "2\" Stainless Ball Valve",
+          "description": "Full-port two-piece ball valve in 316 stainless steel with PTFE seats. Rated to 1000 PSI WOG and suitable for steam service up to 150 PSI. Locking lever handle included as standard.",
+          "unit_price": 228.48,
+          "quantity": 3
+        },
+        {
+          "part_number": "SEN-9902",
+          "product_name": "Pressure Transmitter 0-300PSI",
+          "description": "Industrial pressure transmitter with 0-300 PSI gauge range and 4-20 mA output. 316L stainless wetted parts with 1/4\" NPT process connection. Accuracy of 0.25% full scale, CE and UL rated. Operating temperature -40 to 105 C.",
+          "unit_price": 287.4,
+          "quantity": null
+        },
+        {
+          "part_number": "ACT-7350",
+          "product_name": "Pneumatic Rotary Actuator",
+          "description": "Rack-and-pinion pneumatic actuator, double-acting, 90 degree rotation. Output torque 350 in-lb at 80 PSI supply with NAMUR accessory mounting. Anodized aluminum body with stainless fasteners.",
+          "unit_price": 232.13,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "quote_number": "MIS-26-0257",
+      "quote_date": "2026-02-26",
+      "customer": "Redline Automotive Group",
+      "layout": "paragraph",
+      "files": [
+        "MIS-26-0257.docx",
+        "MIS-26-0257.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "HYD-6621",
+          "product_name": "Hydraulic Cylinder 3\" Bore x 12\" Stroke",
+          "description": "Welded cross-tube hydraulic cylinder with 3 inch bore and 12 inch stroke. 3000 PSI working pressure with chrome-plated induction-hardened rod. SAE ports and greaseable pivot pins on both ends.",
+          "unit_price": 567.93,
+          "quantity": 25
+        },
+        {
+          "part_number": "CPL-4415",
+          "product_name": "Jaw Coupling 28mm Complete",
+          "description": "Three-piece jaw coupling with two sintered iron hubs and NBR spider insert. Accommodates 28 mm bores with standard keyway. Torque rating 190 Nm with vibration-damping elastomer element.",
+          "unit_price": 79.8,
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "quote_number": "QT260265",
+      "quote_date": "2026-03-06",
+      "customer": null,
+      "layout": "letter",
+      "files": [
+        "QT260265.docx",
+        "QT260265.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "HYD-6621",
+          "product_name": "Hydraulic Cylinder 3\" Bore x 12\" Stroke",
+          "description": "Welded cross-tube hydraulic cylinder with 3 inch bore and 12 inch stroke. 3000 PSI working pressure with chrome-plated induction-hardened rod. SAE ports and greaseable pivot pins on both ends.",
+          "unit_price": 564.55,
+          "quantity": 2
+        },
+        {
+          "part_number": "SEN-9902",
+          "product_name": "Pressure Transmitter 0-300PSI",
+          "description": "Industrial pressure transmitter with 0-300 PSI gauge range and 4-20 mA output. 316L stainless wetted parts with 1/4\" NPT process connection. Accuracy of 0.25% full scale, CE and UL rated. Operating temperature -40 to 105 C.",
+          "unit_price": 290.94,
+          "quantity": null
+        },
+        {
+          "part_number": "BRG-7742",
+          "product_name": "Spherical Roller Bearing 65mm",
+          "description": null,
+          "unit_price": 429.33,
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "quote_number": "MIS-26-0268",
+      "quote_date": "2026-03-08",
+      "customer": "Harbor Marine Services",
+      "layout": "table",
+      "files": [
+        "MIS-26-0268.docx",
+        "MIS-26-0268.pdf"
+      ],
+      "items": [
+        {
+          "part_number": "BRG-7742",
+          "product_name": "Spherical Roller Bearing 65mm",
+          "description": "Double-row spherical roller bearing with a 65 mm bore and brass cage. Self-aligning design tolerates up to 2 degrees of shaft misalignment. C3 internal clearance for high-temperature operation.",
+          "unit_price": 434.02,
+          "quantity": 25
+        },
+        {
+          "part_number": "SEN-9902",
+          "product_name": "Pressure Transmitter 0-300PSI",
+          "description": "Industrial pressure transmitter with 0-300 PSI gauge range and 4-20 mA output. 316L stainless wetted parts with 1/4\" NPT process connection. Accuracy of 0.25% full scale, CE and UL rated. Operating temperature -40 to 105 C.",
+          "unit_price": 294.34,
+          "quantity": 12
+        }
+      ]
+    }
+  ]
+}

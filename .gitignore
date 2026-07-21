@@ -1,0 +1,6 @@
+output/
+.env
+__pycache__/
+*.pyc
+data/quotes.db
+.pytest_cache/
