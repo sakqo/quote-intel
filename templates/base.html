@@ -4,22 +4,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}Quote Intel Demo{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 <header class="site-header">
-  <a class="brand" href="{{ url_for('home') }}">Quote&nbsp;Intel</a>
-  <nav>
-    <a href="{{ url_for('home') }}">Search</a>
-    <a href="{{ url_for('how_it_works') }}">How it works</a>
-  </nav>
+  <div class="container header-inner">
+    <a class="brand" href="{{ url_for('home') }}">
+      <span class="logo-mark"><span></span></span>
+      Quote Intel
+    </a>
+    <nav>
+      <a class="nav-link{{ ' active' if request.endpoint != 'how_it_works' }}"
+         href="{{ url_for('home') }}">Parts archive</a>
+      <a class="nav-link{{ ' active' if request.endpoint == 'how_it_works' }}"
+         href="{{ url_for('how_it_works') }}">How it works</a>
+    </nav>
+  </div>
 </header>
 <main>
 {% block content %}{% endblock %}
 </main>
 <footer class="site-footer">
-  <p>Demo data is fictional (Meridian Industrial Supply Co. does not exist).
-     Read-only demo &mdash; no data you enter is stored.</p>
+  <div class="container footer-inner">
+    <span>Quote Intel — working demo. Demo data is fictional (Meridian
+          Industrial Supply Co. does not exist).</span>
+    <span class="mono">Read-only demo · nothing you enter is stored</span>
+  </div>
 </footer>
 </body>
 </html>

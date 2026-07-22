@@ -1,50 +1,68 @@
 {% extends "base.html" %}
 {% block title %}Quote Intel — searchable quote archive demo{% endblock %}
 {% block content %}
-<section class="intro">
-  <h1>Search a messy quote archive like a database</h1>
-  <p>
+<section class="container hero">
+  <div class="eyebrow">AI-powered quote archive</div>
+  <h1>Search a messy quote archive like a database.</h1>
+  <p class="hero-sub">
     This demo indexed <strong>25 deliberately messy sample quotes</strong>
     (mixed Word and PDF, three different layouts, inconsistent field labels,
     missing fields, five price formats) using AI extraction driven by an
-    editable plain-English rules file. The result is a clean, searchable
-    database: pick a part number, see its full price history, and generate a
-    ready-to-send Word quote from the most recent data.
-    {% if stats %}
-    Extraction was validated against ground truth at
-    <strong>{{ "%.1f"|format(stats.overall.accuracy * 100) }}% field
-    accuracy</strong> ({{ stats.overall.correct }}/{{ stats.overall.total }}
-    fields) &mdash; <a href="{{ url_for('how_it_works') }}#accuracy">including
-    the two misses, documented honestly</a>.
-    {% endif %}
+    editable plain-English rules file. Pick a part, see its full price
+    history, and generate a ready-to-send Word quote from the most recent
+    data.
   </p>
-</section>
-
-<section>
   <form class="search-form" action="{{ url_for('search') }}" method="get">
-    <input type="text" name="q" placeholder="Part number, e.g. VLV-2043"
+    <input class="search-input" type="text" name="q"
+           placeholder="Search by part number — try VLV-2043"
            aria-label="Part number" required>
-    <button type="submit">Search</button>
   </form>
 </section>
 
-<section>
-  <h2>Available part numbers</h2>
-  <p class="muted">No need to guess — these are all the parts in the archive.</p>
-  <table class="parts-table">
-    <thead>
-      <tr><th>Part number</th><th>Product</th><th>Quotes</th><th>Latest price</th></tr>
-    </thead>
-    <tbody>
-      {% for pn, name, n, price in parts %}
-      <tr>
-        <td><a href="{{ url_for('part_page', part=pn) }}">{{ pn }}</a></td>
-        <td>{{ name or "—" }}</td>
-        <td>{{ n }}</td>
-        <td>{% if price is not none %}${{ "{:,.2f}".format(price) }}{% else %}—{% endif %}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+{% if stats %}
+<section class="container">
+  <div class="stat-cards">
+    <div class="stat-card">
+      <div class="stat-num">{{ stats.n_quotes }}</div>
+      <div class="stat-label">quotes indexed ({{ stats.n_files }} files —
+           each quote as .docx + .pdf)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">{{ "%.1f"|format(stats.overall.accuracy * 100) }}%</div>
+      <div class="stat-label">extraction accuracy —
+           <a href="{{ url_for('how_it_works') }}#accuracy">including the two
+           misses, documented honestly</a></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">{{ stats.overall.total }}</div>
+      <div class="stat-label">fields validated against ground truth</div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="container section">
+  <div class="section-head">
+    <h2>Available parts</h2>
+    <span class="section-count">{{ parts|length }} parts indexed</span>
+  </div>
+  <div class="table-card">
+    <div class="grid-head parts-grid">
+      <span>Part No.</span><span>Product</span><span class="right">Quotes</span>
+      <span class="right">Latest price</span><span></span>
+    </div>
+    {% for pn, name, n, price in parts %}
+    <a class="grid-row parts-grid" href="{{ url_for('part_page', part=pn) }}">
+      <span class="part-id">{{ pn }}</span>
+      <span class="part-product">{{ name or "—" }}</span>
+      <span class="part-count right">{{ n }}</span>
+      <span class="price-mono right">{% if price is not none %}${{ "{:,.2f}".format(price) }}{% else %}—{% endif %}</span>
+      <span class="chev">›</span>
+    </a>
+    {% endfor %}
+  </div>
+  <p class="table-hint">Prices reflect the most recent quote on file. Select
+     a part to see its full quote history — no need to guess, this is the
+     whole archive.</p>
 </section>
 {% endblock %}
