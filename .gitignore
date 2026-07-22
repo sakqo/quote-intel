@@ -2,5 +2,6 @@ output/
 .env
 __pycache__/
 *.pyc
-data/quotes.db
 .pytest_cache/
+# NOTE: data/quotes.db and data/validation_report.json are deliberately
+# committed — the demo website (app.py) serves from the pre-indexed database.

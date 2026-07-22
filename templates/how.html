@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}How it works — Quote Intel{% endblock %}
+{% block content %}
+<h1>How it works</h1>
+
+<h2>The problem</h2>
+<p>Businesses accumulate thousands of old quotes as Word and PDF files. When
+a repeat product needs quoting, staff dig through the archive by part number,
+find the most recent quote, and copy details into a new document by hand.
+This project automates that end to end.</p>
+
+<h2>The pipeline</h2>
+<ol class="pipeline">
+  <li><strong>Messy archive.</strong> 25 sample quotes (2022&ndash;2026), each
+      saved as both .docx and .pdf — 50 files. Three layouts (tables,
+      paragraph blocks, business letters), six different labels for
+      "part number", five price formats, four date formats, and deliberately
+      missing fields.</li>
+  <li><strong>AI extraction.</strong> Each document's text is sent to Claude
+      with a <em>plain-English rules file</em> (field synonyms, layout notes,
+      "output null, never invent values"). The owner edits the rules file to
+      change extraction behavior — no code changes. Structured JSON comes
+      back via a forced tool call.</li>
+  <li><strong>SQLite.</strong> Quotes and line items land in a small
+      relational database, indexed by part number. Indexing is resumable and
+      cost about $0.60 for the whole archive.</li>
+  <li><strong>Template population.</strong> A search finds every occurrence
+      of a part; the most recent quote date wins. Its price, name, and
+      description are written into a clean Word template — the file you can
+      download from this demo.</li>
+</ol>
+
+<h2 id="accuracy">Validation methodology &amp; honest results</h2>
+<p>The archive generator writes a ground-truth answer key alongside the
+documents. The extractor never sees it. After indexing, every extracted field
+is compared against the key: exact match for part numbers, prices (to the
+cent), quantities and dates; whitespace-normalized fuzzy match for names and
+descriptions. Missed line items and hallucinated ("spurious") line items both
+count against accuracy — silence and invention are the two ways extraction
+lies.</p>
+
+{% if stats %}
+<table class="stats-table">
+  <thead><tr><th>Field</th><th>Correct</th><th>Total</th><th>Accuracy</th></tr></thead>
+  <tbody>
+    {% for field, s in stats.fields.items() %}
+    <tr><td>{{ field }}</td><td>{{ s.correct }}</td><td>{{ s.total }}</td>
+        <td>{{ "%.1f"|format(s.correct / s.total * 100) }}%</td></tr>
+    {% endfor %}
+    <tr class="total-row"><td>OVERALL</td><td>{{ stats.overall.correct }}</td>
+        <td>{{ stats.overall.total }}</td>
+        <td>{{ "%.1f"|format(stats.overall.accuracy * 100) }}%</td></tr>
+  </tbody>
+</table>
+
+<h3>The two misses</h3>
+<p>Both failures are the same root cause, and both are product names in PDFs:
+pdfplumber renders a wrapped table cell across physical lines, and the model
+dropped the wrapped fragment:</p>
+<ul>
+  {% for msg in stats.failures.get("product name mismatch", []) %}
+  <li><code>{{ msg }}</code></li>
+  {% endfor %}
+</ul>
+<p>The .docx twins of the same two quotes extracted perfectly — the wrap only
+exists in the PDF rendering. Every part number, price, description, quantity,
+date, and customer across all 50 files was extracted correctly, with zero
+hallucinated line items.</p>
+{% endif %}
+
+<h2>Code</h2>
+<p>Full source, including the archive generator, extraction rules, validation
+harness, and this site: <a href="{{ github }}">{{ github }}</a></p>
+{% endblock %}

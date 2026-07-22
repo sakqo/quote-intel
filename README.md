@@ -56,6 +56,39 @@ python -m pytest tests/ -q
 Unknown part numbers fail gracefully: the script lists what was found,
 suggests close matches (fuzzy), and writes nothing unless `--allow-partial`.
 
+## Live demo website
+
+`app.py` is a small Flask app that puts the whole thing in a browser —
+searchable part list, per-part quote history (most recent highlighted),
+"did you mean" fuzzy suggestions, and one-click quote generation with an
+HTML preview and .docx download.
+
+```powershell
+python app.py            # local, http://127.0.0.1:5001
+```
+
+Demo properties:
+
+- **Read-only** — no extraction API calls at runtime; page queries use a
+  read-only SQLite connection (`mode=ro`); generated documents exist only in
+  memory behind a random token that expires after 10 minutes.
+- **Bundled data** — `data/quotes.db` (pre-indexed) and
+  `data/validation_report.json` (written by `test_extraction.py`) ship with
+  the repo so the site shows the honest accuracy numbers, including the two
+  documented misses on the "How it works" page.
+- **Abuse protection** — 20 quote generations per IP per hour (HTTP 429
+  after), and customer/company inputs are sanitized (length-capped,
+  restricted character set) before touching the template.
+- **Deploy on Render free tier** — `render.yaml` is included: connect the
+  repo at https://render.com, and it builds with `pip install -r
+  requirements.txt` and serves via `gunicorn app:app`. No environment
+  variables needed (the demo never calls the API).
+- Frontend is plain HTML/CSS (`templates/` + `static/style.css`); all
+  presentation lives in the stylesheet so a redesign never touches Python.
+
+Update `GITHUB_URL` at the top of `app.py` once the repo has its permanent
+home.
+
 ## Customizing rules.md
 
 `rules.md` is a plain-English rules file loaded verbatim into the extraction

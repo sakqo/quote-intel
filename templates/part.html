@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}{{ part }} — quote history{% endblock %}
+{% block content %}
+<h1>{{ part }}</h1>
+<p><a href="{{ url_for('home') }}">&larr; all parts</a></p>
+
+<h2>Quote history ({{ history|length }} quote{{ "s" if history|length != 1 }})</h2>
+<p class="muted">Newest first. The highlighted row is what a new quote would
+use — the <strong>most recent quote date wins</strong>.</p>
+
+<table class="history-table">
+  <thead>
+    <tr><th>Date</th><th>Quote</th><th>Customer</th><th>Unit price</th>
+        <th>Qty</th><th>Source documents</th></tr>
+  </thead>
+  <tbody>
+    {% for h in history %}
+    <tr class="{{ 'winner' if loop.first }}">
+      <td>{{ h.quote_date or "—" }}{% if loop.first %} <span class="badge">used for new quotes</span>{% endif %}</td>
+      <td>{{ h.quote_number }}</td>
+      <td>{{ h.customer or "—" }}</td>
+      <td>{% if h.unit_price is not none %}${{ "{:,.2f}".format(h.unit_price) }}{% else %}—{% endif %}</td>
+      <td>{{ h.quantity if h.quantity is not none else "—" }}</td>
+      <td class="muted">{{ h.files|join(", ") }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% set latest = history[0] %}
+{% if latest.description %}
+<h3>{{ latest.product_name or part }}</h3>
+<p class="desc">{{ latest.description }}</p>
+{% endif %}
+
+<section class="generate-box">
+  <h2>Generate a quote with this part</h2>
+  <form action="{{ url_for('generate') }}" method="post">
+    <input type="hidden" name="parts" value="{{ part }}">
+    <label>Customer name
+      <input type="text" name="customer" value="Demo Visitor" maxlength="80">
+    </label>
+    <label>Company
+      <input type="text" name="company" value="Example Manufacturing Co." maxlength="80">
+    </label>
+    <label>Quantity
+      <input type="number" name="qty" value="1" min="1" max="999">
+    </label>
+    <button type="submit">Generate Quote (.docx)</button>
+  </form>
+  <p class="muted">Generated with today's date ({{ today.strftime("%B %d, %Y") }})
+     and the most recent archived price above.</p>
+</section>
+{% endblock %}

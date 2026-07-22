@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Quote Intel — searchable quote archive demo{% endblock %}
+{% block content %}
+<section class="intro">
+  <h1>Search a messy quote archive like a database</h1>
+  <p>
+    This demo indexed <strong>25 deliberately messy sample quotes</strong>
+    (mixed Word and PDF, three different layouts, inconsistent field labels,
+    missing fields, five price formats) using AI extraction driven by an
+    editable plain-English rules file. The result is a clean, searchable
+    database: pick a part number, see its full price history, and generate a
+    ready-to-send Word quote from the most recent data.
+    {% if stats %}
+    Extraction was validated against ground truth at
+    <strong>{{ "%.1f"|format(stats.overall.accuracy * 100) }}% field
+    accuracy</strong> ({{ stats.overall.correct }}/{{ stats.overall.total }}
+    fields) &mdash; <a href="{{ url_for('how_it_works') }}#accuracy">including
+    the two misses, documented honestly</a>.
+    {% endif %}
+  </p>
+</section>
+
+<section>
+  <form class="search-form" action="{{ url_for('search') }}" method="get">
+    <input type="text" name="q" placeholder="Part number, e.g. VLV-2043"
+           aria-label="Part number" required>
+    <button type="submit">Search</button>
+  </form>
+</section>
+
+<section>
+  <h2>Available part numbers</h2>
+  <p class="muted">No need to guess — these are all the parts in the archive.</p>
+  <table class="parts-table">
+    <thead>
+      <tr><th>Part number</th><th>Product</th><th>Quotes</th><th>Latest price</th></tr>
+    </thead>
+    <tbody>
+      {% for pn, name, n, price in parts %}
+      <tr>
+        <td><a href="{{ url_for('part_page', part=pn) }}">{{ pn }}</a></td>
+        <td>{{ name or "—" }}</td>
+        <td>{{ n }}</td>
+        <td>{% if price is not none %}${{ "{:,.2f}".format(price) }}{% else %}—{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

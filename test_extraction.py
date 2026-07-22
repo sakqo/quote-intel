@@ -187,6 +187,25 @@ def main():
             if len(msgs) > 10:
                 print(f"    ... and {len(msgs) - 10} more")
 
+    # Machine-readable report (consumed by the demo website, app.py).
+    report = {
+        "generated": __import__("datetime").date.today().isoformat(),
+        "n_quotes": len(key["quotes"]),
+        "n_files": n_expected_files,
+        "n_items": sum(len(q["items"]) for q in key["quotes"]),
+        "fields": {f: {"correct": stats[f][0], "total": stats[f][1]}
+                   for f in ("part_number", "product_name", "description",
+                             "unit_price", "quantity", "quote_date", "customer")},
+        "overall": {"correct": grand_ok, "total": grand_total,
+                    "accuracy": round(overall, 4)},
+        "threshold": THRESHOLD,
+        "passed": overall >= THRESHOLD,
+        "failures": {cause: msgs for cause, msgs in failures.items() if cause},
+    }
+    report_path = ROOT / "data" / "validation_report.json"
+    report_path.write_text(json.dumps(report, indent=2), encoding="utf-8")
+    print(f"\nReport written to {report_path}")
+
     print()
     if overall >= THRESHOLD:
         print(f"PASS: overall accuracy {overall * 100:.1f}% >= {THRESHOLD * 100:.0f}%")

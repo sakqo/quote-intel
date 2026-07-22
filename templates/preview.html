@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Quote {{ quote_number }} — preview{% endblock %}
+{% block content %}
+<div class="preview-actions">
+  <a class="button" href="{{ url_for('download', token=token) }}">Download {{ quote_number }}.docx</a>
+  <a href="{{ url_for('home') }}">&larr; back to search</a>
+</div>
+<p class="muted">Download link expires after 10 minutes. This preview mirrors
+   the Word document contents.</p>
+
+{% if missing %}
+<p class="warn">Not found (left out of the quote):
+   {% for p, s in missing %}{{ p }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+{% endif %}
+
+<article class="quote-doc">
+  <header>
+    <h2 class="doc-company">MERIDIAN INDUSTRIAL SUPPLY CO.</h2>
+    <p class="muted">4410 Commerce Park Drive, Toledo, OH 43615 &nbsp;|&nbsp; (419) 555-0142</p>
+    <p class="doc-kind">QUOTATION</p>
+  </header>
+  <dl class="doc-meta">
+    <dt>Quote No.:</dt><dd>{{ quote_number }}</dd>
+    <dt>Date:</dt><dd>{{ today.strftime("%B %d, %Y") }}</dd>
+    <dt>Customer:</dt><dd>{{ customer }}, {{ company }}</dd>
+  </dl>
+  <table class="doc-items">
+    <thead>
+      <tr><th>Part Number</th><th>Product</th><th>Description</th>
+          <th>Qty</th><th>Unit Price</th><th>Ext. Price</th></tr>
+    </thead>
+    <tbody>
+      {% for it in items %}
+      <tr>
+        <td>{{ it.part_number }}</td>
+        <td>{{ it.product_name or "" }}</td>
+        <td class="desc">{{ it.description or "" }}</td>
+        <td>{{ qty }}</td>
+        <td>{% if it.unit_price is not none %}${{ "{:,.2f}".format(it.unit_price) }}{% else %}—{% endif %}</td>
+        <td>{% if it.unit_price is not none %}${{ "{:,.2f}".format(it.unit_price * qty) }}{% else %}—{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p class="doc-total">Total: ${{ "{:,.2f}".format(total) }}</p>
+  <p class="muted">Prices are valid for 30 days from the date above.
+     FOB Toledo, OH. Payment terms Net 30.</p>
+</article>
+
+<p class="muted">Source: each line came from the most recent archived quote
+   for that part
+   ({% for it in items %}{{ it.part_number }} from {{ it.quote_number }},
+   {{ it.quote_date }}{% if not loop.last %}; {% endif %}{% endfor %}).</p>
+{% endblock %}

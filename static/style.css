@@ -1,0 +1,86 @@
+/* Deliberately simple, framework-free styles. All presentation lives here —
+   a later design pass replaces this file without touching Python or HTML. */
+
+:root {
+  --accent: #1f4e79;
+  --ink: #222;
+  --muted: #667;
+  --line: #d8dce2;
+  --bg-soft: #f4f6f8;
+  --warn-bg: #fff4e5;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--ink);
+  line-height: 1.55;
+}
+main { max-width: 860px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+
+.site-header {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 0.9rem 1rem; border-bottom: 2px solid var(--accent);
+  max-width: 860px; margin: 0 auto;
+}
+.brand { font-weight: 700; font-size: 1.2rem; color: var(--accent);
+         text-decoration: none; }
+.site-header nav a { margin-left: 1rem; color: var(--accent); }
+
+.site-footer { max-width: 860px; margin: 0 auto; padding: 1rem;
+               border-top: 1px solid var(--line); color: var(--muted);
+               font-size: 0.85rem; }
+
+h1 { font-size: 1.5rem; color: var(--accent); }
+h2 { font-size: 1.15rem; margin-top: 2rem; }
+a { color: var(--accent); }
+.muted { color: var(--muted); font-size: 0.9rem; }
+.warn { background: var(--warn-bg); padding: 0.6rem 0.8rem; border-radius: 4px; }
+
+.search-form { display: flex; gap: 0.5rem; margin: 1rem 0; }
+.search-form input[type="text"] {
+  flex: 1; padding: 0.55rem 0.7rem; font-size: 1rem;
+  border: 1px solid var(--line); border-radius: 4px;
+}
+button, .button {
+  background: var(--accent); color: #fff; border: none; border-radius: 4px;
+  padding: 0.55rem 1rem; font-size: 1rem; cursor: pointer;
+  text-decoration: none; display: inline-block;
+}
+button:hover, .button:hover { filter: brightness(1.15); }
+
+table { border-collapse: collapse; width: 100%; margin: 0.75rem 0; }
+th, td { text-align: left; padding: 0.45rem 0.6rem;
+         border-bottom: 1px solid var(--line); vertical-align: top; }
+thead th { background: var(--bg-soft); border-bottom: 2px solid var(--accent); }
+
+.history-table .winner { background: #eef6ee; }
+.badge { background: var(--accent); color: #fff; font-size: 0.7rem;
+         padding: 0.1rem 0.4rem; border-radius: 3px; white-space: nowrap; }
+
+.generate-box { margin-top: 2.5rem; padding: 1rem 1.2rem;
+                background: var(--bg-soft); border-radius: 6px; }
+.generate-box label { display: block; margin: 0.6rem 0; max-width: 26rem; }
+.generate-box input { display: block; width: 100%; padding: 0.45rem 0.6rem;
+                      border: 1px solid var(--line); border-radius: 4px; }
+.generate-box button { margin-top: 0.8rem; }
+
+.preview-actions { display: flex; gap: 1.2rem; align-items: center;
+                   margin-bottom: 0.4rem; }
+
+.quote-doc { border: 1px solid var(--line); border-radius: 6px;
+             padding: 1.5rem; margin-top: 1rem;
+             box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+.doc-company { color: var(--accent); margin: 0; font-size: 1.2rem; }
+.doc-kind { text-align: right; font-weight: 700; color: var(--accent); }
+.doc-meta { display: grid; grid-template-columns: 7rem 1fr; gap: 0.2rem 0.6rem; }
+.doc-meta dt { font-weight: 600; }
+.doc-meta dd { margin: 0; }
+.doc-items .desc { font-size: 0.85rem; }
+.doc-total { text-align: right; font-weight: 700; }
+
+.stats-table .total-row td { font-weight: 700; border-top: 2px solid var(--accent); }
+.pipeline li { margin-bottom: 0.6rem; }
+code { background: var(--bg-soft); padding: 0.1rem 0.3rem; border-radius: 3px;
+       font-size: 0.85em; }

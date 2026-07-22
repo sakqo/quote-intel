@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Part not found{% endblock %}
+{% block content %}
+<h1>No quotes found for “{{ part }}”</h1>
+{% if suggestions %}
+<p>Did you mean:</p>
+<ul>
+  {% for s in suggestions %}
+  <li><a href="{{ url_for('part_page', part=s) }}">{{ s }}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No close matches either. Browse the
+   <a href="{{ url_for('home') }}">full part list</a>.</p>
+{% endif %}
+{% endblock %}
